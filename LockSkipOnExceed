@@ -1,0 +1,7 @@
+   var newMedia = obj.media;
+            if (apibot.settings.timeGuard && newMedia.duration > apibot.settings.maximumSongLength * 60 && !apibot.room.roomevent) {
+                var name = obj.dj.username;
+                API.sendChat(subChat(apibot.chat.timelimit, {name: name, maxlength: apibot.settings.maximumSongLength}));
+                API.moderateForceSkip();
+            }
+            
