@@ -1,7 +1,30 @@
-   var newMedia = obj.media;
+  var newMedia = obj.media;
             if (apibot.settings.timeGuard && newMedia.duration > apibot.settings.maximumSongLength * 60 && !apibot.room.roomevent) {
-                var name = obj.dj.username;
+                var dj = API.getDJ();
+                var id = dj.id;
+                var name = dj.username;
+                var msgSend = '@' + name + ': ';
+               
                 API.sendChat(subChat(apibot.chat.timelimit, {name: name, maxlength: apibot.settings.maximumSongLength}));
-                API.moderateForceSkip();
+                apibot.roomUtilities.booth.lockBooth();
+                                setTimeout(function (id) {
+                                    API.moderateForceSkip();
+                                    apibot.room.skippable = false;
+                                    setTimeout(function () {
+                                        apibot.room.skippable = true
+                                    }, 5 * 1000);
+                                    setTimeout(function (id) {
+                                        apibot.userUtilities.moveUser(id, apibot.settings.lockskipPosition, false);
+                                        apibot.room.queueable = true;
+                                        setTimeout(function () {
+                                            apibot.roomUtilities.booth.unlockBooth();
+                                        }, 1000);
+                                    }, 1500, id);
+                                }, 1000, id);
+                                return void (0);
+                            }
+                            
+            if (user.ownSong) {
+                API.sendChat(subChat(apibot.chat.permissionownsong, {name: user.username}));
+                user.ownSong = false;
             }
-            
