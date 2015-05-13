@@ -1,4 +1,4 @@
-  var newMedia = obj.media;
+ var newMedia = obj.media;
             if (basicbot.settings.timeGuard && newMedia.duration > basicbot.settings.maximumSongLength * 60 && !basicbot.room.roomevent) {
                 var dj = API.getDJ();
                 var id = dj.id;
@@ -23,5 +23,3 @@
                                 }, 1000, id);
                                 return void (0);
                             }
-                            
-
