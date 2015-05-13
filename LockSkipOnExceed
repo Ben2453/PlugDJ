@@ -1,23 +1,23 @@
   var newMedia = obj.media;
-            if (apibot.settings.timeGuard && newMedia.duration > apibot.settings.maximumSongLength * 60 && !apibot.room.roomevent) {
+            if (basicbot.settings.timeGuard && newMedia.duration > basicbot.settings.maximumSongLength * 60 && !basicbot.room.roomevent) {
                 var dj = API.getDJ();
                 var id = dj.id;
                 var name = dj.username;
                 var msgSend = '@' + name + ': ';
                
-                API.sendChat(subChat(apibot.chat.timelimit, {name: name, maxlength: apibot.settings.maximumSongLength}));
-                apibot.roomUtilities.booth.lockBooth();
+                API.sendChat(subChat(basicbot.chat.timelimit, {name: name, maxlength: basicbot.settings.maximumSongLength}));
+                basicbot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
-                                    apibot.room.skippable = false;
+                                    basicbot.room.skippable = false;
                                     setTimeout(function () {
-                                        apibot.room.skippable = true
+                                        basicbot.room.skippable = true
                                     }, 5 * 1000);
                                     setTimeout(function (id) {
-                                        apibot.userUtilities.moveUser(id, apibot.settings.lockskipPosition, false);
-                                        apibot.room.queueable = true;
+                                        basicbot.userUtilities.moveUser(id, basicbot.settings.lockskipPosition, false);
+                                        basicbot.room.queueable = true;
                                         setTimeout(function () {
-                                            apibot.roomUtilities.booth.unlockBooth();
+                                            basicbot.roomUtilities.booth.unlockBooth();
                                         }, 1000);
                                     }, 1500, id);
                                 }, 1000, id);
@@ -25,6 +25,6 @@
                             }
                             
             if (user.ownSong) {
-                API.sendChat(subChat(apibot.chat.permissionownsong, {name: user.username}));
+                API.sendChat(subChat(basicbot.chat.permissionownsong, {name: user.username}));
                 user.ownSong = false;
             }
