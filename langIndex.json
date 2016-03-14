@@ -1,0 +1,16 @@
+
+{
+    "czech": "https://rawgit.com/xSidewinderx/cs.json",
+    "german": "https://rawgit.com/xSidewinderx/de.json",
+    "english": "https://rawgit.com/xSidewinderx/en.json",
+    "spanish": "https://rawgit.com/xSidewinderx/es-ES.json",
+    "french": "https://rawgit.com/xSidewinderx/fr.json",
+    "latvian": "https://rawgit.com/xSidewinderx/lv-LV.json",
+    "malay": "https://rawgit.com/xSidewinderx/ms.json",
+    "dutch": "https://rawgit.com/xSidewinderx/nl.json",
+    "polish": "https://rawgit.com/xSidewinderx/pl.json",
+    "portuguese": "https://rawgit.com/xSidewinderx/pt-BR.json",
+    "serbian": "https://rawgit.com/xSidewinderx/sr.json",
+    "turkish": "https://rawgit.com/xSidewinderx/tr.json",
+    "chinese": "https://rawgit.com/xSidewinderx/zh-TW.json"
+}
