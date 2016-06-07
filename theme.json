@@ -5,10 +5,10 @@
         "chat": {
 			"ambassador": "#89BE6C",
             "bouncer": "#AC76FF",
-            "cohost": "#AC76FF",
-            "residentdj": "#AC76FF",
-            "host": "#AC76FF",
-            "manager": "#AC76FF"
+            "cohost": "#8638FF",
+            "residentdj": "#F4FF8F",
+            "host": "#6400FF",
+            "manager": "#A266FF"
         }
     },
 
@@ -43,15 +43,15 @@
 					"background-color":"rgba(0, 175, 228, 0.20) !important","font-weight":"700","padding-left":"25px","border-left":"#7681FF 3px solid"
 				},
 		"#chat .mention.from-3560111 > i": {
-                "background-image": "url('http://i.imgur.com/HioCmqo.png') !important",
+                "background-image": "url('http://i.imgur.com/WTylHRy.png') !important",
                 "background-position": "0 0"
             },
             "#chat .message.from-3560111 > i": {
-                "background-image": "url('http://i.imgur.com/HioCmqo.png') !important",
+                "background-image": "url('http://i.imgur.com/WTylHRy.png') !important",
                 "background-position": "0 0"
             },
             "#chat .emote.from-3560111 > i": {
-                "background-image": "url('http://i.imgur.com/HioCmqo.png') !important",
+                "background-image": "url('http://i.imgur.com/WTylHRy.png') !important",
                 "background-position": "0 0"
             },
             "#playlist-meta": {
@@ -100,7 +100,7 @@
         }
     },
    "images": {
-        "background": "http://i.imgur.com/EFXFnql.png",
+        "background": "http://i.imgur.com/WTylHRy.png",
         "icons": {
         "residentdj": "http://i.imgur.com/5dFaFQG.png"
         },
@@ -109,6 +109,6 @@
     "rules": {
         "allowAutorespond": "true",
         "allowAutowoot": "true",
-        "allowAutojoin": "false"
+        "allowAutojoin": "true"
     }
 }
